@@ -30,7 +30,7 @@ async function login(user) {
             currentUser.token = token;
             return currentUser;
         } else {
-            return null;
+            throw new Error('Authetication failed');
         }
     });
 }

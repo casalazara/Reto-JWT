@@ -29,10 +29,10 @@ router.post("/register", async function (req, res, next) {
  * Login user
  */
 router.post("/login", async function (req, res, next) {
-  const user = await login(req.body);
-  if (user) {
+  try {
+    const user = await login(req.body);
     res.send(user);
-  } else {
+  } catch (error) {
     // El error 403 corresponde a Forbidden (Prohibido) de acuerdo al estándar HTTP
     res.send(403).json({
       success: false,
