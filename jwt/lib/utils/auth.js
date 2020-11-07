@@ -1,6 +1,5 @@
 let jwt = require("jsonwebtoken");
-const config = require("../../config.js");
-
+const secret = process.env.JWT_SECRET;
 // Función encargada de realizar la validación del token y que es directamente consumida por server.js
 let checkToken = (req, res, next) => {
   // Extrae el token de la solicitud enviado a través de cualquiera de los dos headers especificados
@@ -14,7 +13,7 @@ let checkToken = (req, res, next) => {
     if (token.startsWith("Bearer ")) {
       token = token.slice(7, token.length);
       // Llama la función verify del paquete jsonwebtoken que se encarga de realizar la validación del token con el secret proporcionado
-      jwt.verify(token, config.secret, (err, decoded) => {
+      jwt.verify(token, secret, (err, decoded) => {
         // Si no pasa la validación, un mensaje de error es retornado
         // de lo contrario, permite a la solicitud continuar
         if (err) {
@@ -48,7 +47,7 @@ function requireAdmin(req, res, next) {
     if (token.startsWith("Bearer ")) {
       token = token.slice(7, token.length);
       // Llama la función verify del paquete jsonwebtoken que se encarga de realizar la validación del token con el secret proporcionado
-      jwt.verify(token, config.secret, (err, decoded) => {
+      jwt.verify(token, secret, (err, decoded) => {
         // Si no pasa la validación, un mensaje de error es retornado
         // de lo contrario, permite a la solicitud continuar
         if (err) {
@@ -85,7 +84,7 @@ function requireMod(req, res, next) {
     if (token.startsWith("Bearer ")) {
       token = token.slice(7, token.length);
       // Llama la función verify del paquete jsonwebtoken que se encarga de realizar la validación del token con el secret proporcionado
-      jwt.verify(token, config.secret, (err, decoded) => {
+      jwt.verify(token, secret, (err, decoded) => {
         // Si no pasa la validación, un mensaje de error es retornado
         // de lo contrario, permite a la solicitud continuar
         if (err) {
@@ -111,11 +110,11 @@ function requireMod(req, res, next) {
 }
 
 function createToken(data) {
-  return jwt.sign(data, config.secret, { algorithm: "HS256", expiresIn: "1h" });
+  return jwt.sign(data, secret, { algorithm: "HS256", expiresIn: "1h" });
 }
 
 function validateToken(token, req, res, next) {
-  jwt.verify(token, config.secret, (err, decoded) => {
+  jwt.verify(token, secret, (err, decoded) => {
     if (err) {
       return res.send(401).json({
         success: false,
