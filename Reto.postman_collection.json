@@ -1,0 +1,435 @@
+{
+	"info": {
+		"_postman_id": "a12d8f8d-d389-44f5-950e-e899b1532398",
+		"name": "Reto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Salacho\",\r\n    \"password\":\"CH355\",\r\n    \"role\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/register/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Salacho2\",\r\n    \"password\":\"CH355\",\r\n    \"role\":\"client\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/register/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register Mod",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Salacho3\",\r\n    \"password\":\"CH355\",\r\n    \"role\":\"mod\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/register/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Salacho\",\r\n    \"password\":\"CH355\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/login/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Client",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Salacho2\",\r\n    \"password\":\"CH355\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/login/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login Mod",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Salacho3\",\r\n    \"password\":\"CH355\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/login/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Productos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE1Y2U0NjUyZDNkMTQ5NjgyNWZhNzgiLCJuYW1lIjoiU2FsYWNobyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYwNDcwNzQwNywiZXhwIjoxNjA0NzExMDA3fQ.rHIgerUKtPPSEAVmI9KaJdsdIrrWsrecsPScEKPwGp0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/products/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post Productos Admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE1Y2U0NjUyZDNkMTQ5NjgyNWZhNzgiLCJuYW1lIjoiU2FsYWNobyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYwNDcwNzQwNywiZXhwIjoxNjA0NzExMDA3fQ.rHIgerUKtPPSEAVmI9KaJdsdIrrWsrecsPScEKPwGp0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idproducto\": \"10000\",\r\n        \"nombreProducto\": \"Té de frutos rojos\",\r\n        \"idProveedor\": \"1\",\r\n        \"idCategoria\": \"1\",\r\n        \"cantidadPorUnidad\": \"10 cajas x 20 bolsas\",\r\n        \"precioUnidad\": \"18\",\r\n        \"unidadesEnExistencia\": \"39\",\r\n        \"unidadesEnPedido\": \"0\",\r\n        \"nivelNuevoPedido\": \"10\",\r\n        \"suspendido\": \"0\",\r\n        \"categoriaProducto\": \"Categoria D\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/products/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post Productos Client",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE1ZWM4NTAyZWQyODI1NDA5ZGY0ZjUiLCJuYW1lIjoiU2FsYWNobzIiLCJyb2xlIjoiY2xpZW50IiwiaWF0IjoxNjA0NzA5NTMzLCJleHAiOjE2MDQ3MTMxMzN9.Z7Lx-f8vLH0mB7655beqJe4XISK_n1xHoneMrWzY5Ys",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"idproducto\": \"10000\",\r\n        \"nombreProducto\": \"Té de frutos rojos\",\r\n        \"idProveedor\": \"1\",\r\n        \"idCategoria\": \"1\",\r\n        \"cantidadPorUnidad\": \"10 cajas x 20 bolsas\",\r\n        \"precioUnidad\": \"18\",\r\n        \"unidadesEnExistencia\": \"39\",\r\n        \"unidadesEnPedido\": \"0\",\r\n        \"nivelNuevoPedido\": \"10\",\r\n        \"suspendido\": \"0\",\r\n        \"categoriaProducto\": \"Categoria D\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/products/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put Productos Admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE1Y2U0NjUyZDNkMTQ5NjgyNWZhNzgiLCJuYW1lIjoiU2FsYWNobyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYwNDcxMDQ1MCwiZXhwIjoxNjA0NzE0MDUwfQ.CDxGTy37wQmi4hu7X8xviXIoqLekkFYEQSKBCV8b9Fg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idproducto\": \"2\",\r\n    \"nombreProducto\": \"Cerveza de frutos grises\",\r\n    \"idProveedor\": \"1\",\r\n    \"idCategoria\": \"1\",\r\n    \"cantidadPorUnidad\": \"10 cohetes xd 220 barriles\",\r\n    \"precioUnidad\": \"18\",\r\n    \"unidadesEnExistencia\": \"39\",\r\n    \"unidadesEnPedido\": \"0\",\r\n    \"nivelNuevoPedido\": \"10\",\r\n    \"suspendido\": \"0\",\r\n    \"categoriaProducto\": \"Categoria D\",\r\n    \"_id\":\"5fa5d935c4b2f844b84cc52c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/products/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put Productos Client",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE1ZWM4NTAyZWQyODI1NDA5ZGY0ZjUiLCJuYW1lIjoiU2FsYWNobzIiLCJyb2xlIjoiY2xpZW50IiwiaWF0IjoxNjA0NzA5NTMzLCJleHAiOjE2MDQ3MTMxMzN9.Z7Lx-f8vLH0mB7655beqJe4XISK_n1xHoneMrWzY5Ys",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idproducto\": \"2\",\r\n    \"nombreProducto\": \"Cerveza de frutos rosas\",\r\n    \"idProveedor\": \"1\",\r\n    \"idCategoria\": \"1\",\r\n    \"cantidadPorUnidad\": \"10 cohetes xd 220 barriles\",\r\n    \"precioUnidad\": \"18\",\r\n    \"unidadesEnExistencia\": \"39\",\r\n    \"unidadesEnPedido\": \"0\",\r\n    \"nivelNuevoPedido\": \"10\",\r\n    \"suspendido\": \"0\",\r\n    \"categoriaProducto\": \"Categoria D\",\r\n    \"_id\":\"5fa5d935c4b2f844b84cc52c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/products/?",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Users Client",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE1ZWM4NTAyZWQyODI1NDA5ZGY0ZjUiLCJuYW1lIjoiU2FsYWNobzIiLCJyb2xlIjoiY2xpZW50IiwiaWF0IjoxNjA0NzA5NTMzLCJleHAiOjE2MDQ3MTMxMzN9.Z7Lx-f8vLH0mB7655beqJe4XISK_n1xHoneMrWzY5Ys",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Users Mod",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmE1ZjI2YmEzZmVmYTA5YzAwMmJiOWYiLCJuYW1lIjoiU2FsYWNobzMiLCJyb2xlIjoibW9kIiwiaWF0IjoxNjA0NzExOTA3LCJleHAiOjE2MDQ3MTU1MDd9.dONgkUSXtC1isLQ6jHIh4UtkLi9_0rkH74PXMVGDvm4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
